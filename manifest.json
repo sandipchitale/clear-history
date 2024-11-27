@@ -1,0 +1,22 @@
+{
+  "name": "clear-history",
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Uses the chrome.history API to delete history for a site.",
+  "permissions": [
+    "history",
+    "storage"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png"
+    }
+  },
+  "background": {
+    "service_worker": "clear_history_worker.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html"
+  }
+}
