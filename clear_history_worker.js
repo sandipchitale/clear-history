@@ -8,8 +8,7 @@
         historyItems.forEach((historyItem) => {
             console.log(`Item ${historyItem.url}`);
             if (historyItem.url.includes('.facebook.com/')
-                || historyItem.url.includes('.pinterest.com/')
-                || historyItem.url.includes('.pinimg.com/')) {
+                || historyItem.url.includes('.linkedin.com/')) {
                 (async (historyItem) => {
                     console.log(`Deleting ${historyItem.url} with id ${historyItem.id}`);
                     await chrome.history.deleteUrl({
